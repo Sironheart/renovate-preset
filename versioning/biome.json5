@@ -1,0 +1,21 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  customManagers: [
+    {
+      description: "Update Biome schema URL version in biome.json",
+      customType: "regex",
+      managerFilePatterns: ["/^biome\\.json$/"],
+      matchStrings: ["https://biomejs\\.dev/schemas/(?<currentValue>[^/]+)/schema\\.json"],
+      packageNameTemplate: "@biomejs/biome",
+      datasourceTemplate: "npm",
+    },
+  ],
+  packageRules: [
+    {
+      description: "Group Biome updates across package.json, mise.toml, and schema JSON.",
+      groupName: "Biome",
+      groupSlug: "biome",
+      matchPackageNames: ["@biomejs/biome", "npm:@biomejs/biome"],
+    },
+  ],
+}

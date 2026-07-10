@@ -1,0 +1,21 @@
+[pre-commit]
+parallel = true
+skip = ["merge", "rebase"]
+
+[pre-commit.commands.renovate-config-validator]
+glob = ["*.json5"]
+run = "renovate-config-validator --strict {staged_files}"
+
+[pre-commit.commands.format-mise]
+glob = [".mise.toml", ".mise/config.toml"]
+run = "mise fmt"
+stage_fixed = true
+
+[pre-commit.commands.format-json]
+glob = ["*.json", "*.json5", "*.jsonc"]
+run = "oxfmt {staged_files}"
+stage_fixed = true
+
+[pre-commit.commands.mise-lock]
+glob = ["mise.toml"]
+run = 'mise lock && { for f in {staged_files}; do l="$(dirname "$f")/mise.lock"; [ -f "$l" ] && git add "$l"; done; true; }'

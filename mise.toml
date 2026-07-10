@@ -1,0 +1,27 @@
+[tools]
+lefthook = "2.1.10"
+node = "26.5.0"
+oxfmt = "0.58.0"
+"npm:renovate" = "43.251.3"
+shellcheck = "0.11.0"
+
+[tasks.gen]
+description = "Regenerate default.json from the preset directories"
+run = "node scripts/gen-default.mjs"
+
+[tasks.lint]
+description = "Check JSON/JSON5, YAML, Markdown, and shell formatting"
+run = ["oxfmt --check ."]
+
+[tasks.validate]
+description = "Validate Renovate presets against the schema"
+run = "renovate-config-validator --strict **/*.json5"
+
+[tasks.format]
+alias = "fmt"
+description = "Format all files"
+run = ["oxfmt --write .", "mise fmt"]
+
+
+[hooks]
+postinstall = "lefthook install"
