@@ -5,6 +5,7 @@
     "github>sironheart/renovate-preset//config/baseConfig.json5",
     "github>sironheart/renovate-preset//config/dependencyDashboard.json5",
     "github>sironheart/renovate-preset//managers/annotated.json5",
+    "github>sironheart/renovate-preset//policies/allowUnsafeExections.json5",
     "github>sironheart/renovate-preset//policies/semanticCommits.json5",
     "github>sironheart/renovate-preset//versioning/biome.json5",
     "github>sironheart/renovate-preset//versioning/pulumi.json5"
