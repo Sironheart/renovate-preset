@@ -2,11 +2,14 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "Stock Renovate presets that form the base of this bundle. Listed alphabetically first so subsequent presets in this repo can override.",
   extends: [
-    "config:recommended",
+    "config:best-practices",
     "docker:enableMajor",
     "helpers:pinGitHubActionDigestsToSemver",
-    ":automergeBranch",
-    ":dependencyDashboard",
     ":disableRateLimiting",
+    "customManagers:githubActionsVersions",
+    "customManagers:helmChartYamlAppVersions",
+    "customManagers:makefileVersions",
+    "customManagers:tsconfigNodeVersions",
   ],
+  allowedUnsafeExecutions: ["bazelModDeps", "goGenerate", "gradleWrapper", "mise"],
 }
