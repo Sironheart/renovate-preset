@@ -11,5 +11,4 @@
     "customManagers:makefileVersions",
     "customManagers:tsconfigNodeVersions",
   ],
-  allowedUnsafeExecutions: ["bazelModDeps", "goGenerate", "gradleWrapper", "mise"],
 }

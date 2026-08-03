@@ -21,7 +21,7 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 
 ```jsonc
 {
-    "extends": ["github>sironheart/renovate-preset//managers/annotated.json5"],
+    "extends": ["github>sironheart/renovate-preset//versioning/biome.json5"],
 }
 ```
 
@@ -36,7 +36,6 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 Presets are grouped by intent. Each file is self-documenting — open it for the `description` and any caveats.
 
 - [`config/`](./config) — top-level Renovate config (registry aliases, built-in manager file-pattern extensions).
-- [`managers/`](./managers) — custom regex and datasource managers that pick up dependencies Renovate's built-in managers miss.
 
 <!-- - [`overrides/`](./overrides) — fixes to `depName`, `sourceUrl`, `packageName`, or `changelogUrl` for specific packages or managers. -->
 
