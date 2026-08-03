@@ -9,7 +9,7 @@ const extendsList = DIRS.flatMap((dir) =>
   readdirSync(dir)
     .filter((f) => f.endsWith(".json5"))
     .sort()
-    .map((f) => `github>${REPO}//${dir}/${f}`),
+    .map((f) => `local>${REPO}//${dir}/${f}`),
 );
 
 const out = {

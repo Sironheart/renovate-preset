@@ -2,10 +2,12 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Extend every preset in this repo. Prefer extending individual presets when you only need some.",
   "extends": [
-    "github>sironheart/renovate-preset//config/baseConfig.json5",
-    "github>sironheart/renovate-preset//config/dependencyDashboard.json5",
-    "github>sironheart/renovate-preset//policies/semanticCommits.json5",
-    "github>sironheart/renovate-preset//versioning/biome.json5",
-    "github>sironheart/renovate-preset//versioning/pulumi.json5"
+    "local>sironheart/renovate-preset//config/baseConfig.json5",
+    "local>sironheart/renovate-preset//config/dependencyDashboard.json5",
+    "local>sironheart/renovate-preset//config/hostRules.json5",
+    "local>sironheart/renovate-preset//config/registryAlias.json5",
+    "local>sironheart/renovate-preset//policies/semanticCommits.json5",
+    "local>sironheart/renovate-preset//versioning/biome.json5",
+    "local>sironheart/renovate-preset//versioning/pulumi.json5"
   ]
 }
