@@ -1,8 +1,8 @@
 [tools]
 lefthook = "2.1.10"
-node = "24.18.0"
-oxfmt = "0.59.0"
-"npm:renovate" = "44.4.0"
+node = "24.19.0"
+oxfmt = "0.61.0"
+"npm:renovate" = { version = "44.4.0", trust_policy_excludes = ["@yarnpkg/libzip@3.2.2"] }
 shellcheck = "0.11.0"
 
 [tasks.gen]
@@ -20,7 +20,7 @@ run = "renovate-config-validator --strict **/*.json5"
 [tasks.format]
 alias = "fmt"
 description = "Format all files"
-run = ["oxfmt --write .", "mise fmt"]
+run = ["oxfmt --write ."]
 
 
 [hooks]
