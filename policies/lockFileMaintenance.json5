@@ -1,0 +1,10 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Refresh lock files and automerge maintenance after CI passes.",
+  lockFileMaintenance: {
+    enabled: true,
+    automerge: true,
+    automergeType: "pr",
+    platformAutomerge: true,
+  },
+}

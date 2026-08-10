@@ -6,7 +6,7 @@
       description: "Group Biome updates across package.json, mise.toml, and schema JSON.",
       groupName: "Biome",
       groupSlug: "biome",
-      matchPackageNames: ["@biomejs/biome", "npm:@biomejs/biome"],
+      matchPackageNames: ["@biomejs/biome"],
     },
   ],
 }

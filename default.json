@@ -6,6 +6,8 @@
     "local>sironheart/renovate-preset//config/dependencyDashboard.json5",
     "local>sironheart/renovate-preset//config/hostRules.json5",
     "local>sironheart/renovate-preset//config/registryAlias.json5",
+    "local>sironheart/renovate-preset//policies/automerge.json5",
+    "local>sironheart/renovate-preset//policies/lockFileMaintenance.json5",
     "local>sironheart/renovate-preset//policies/semanticCommits.json5",
     "local>sironheart/renovate-preset//versioning/biome.json5",
     "local>sironheart/renovate-preset//versioning/pulumi.json5"

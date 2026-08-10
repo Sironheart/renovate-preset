@@ -1,0 +1,22 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Automerge trusted tooling updates after CI passes.",
+  packageRules: [
+    {
+      description: "Automerge Renovate and formatter updates after CI passes.",
+      matchPackageNames: [
+        "@biomejs/biome",
+        "docker.io/renovate/renovate",
+        "ghcr.io/renovatebot/renovate",
+        "oxfmt",
+        "prettier",
+        "renovate",
+        "renovate/renovate",
+        "renovatebot/renovate",
+      ],
+      automerge: true,
+      automergeType: "pr",
+      platformAutomerge: true,
+    },
+  ],
+}
