@@ -3,7 +3,7 @@
   description: "Refresh lock files and automerge maintenance after CI passes.",
   lockFileMaintenance: {
     enabled: true,
-    schedule: ["before 4am on monday"],
+    schedule: ["* 0-3 * * 1"],
     automerge: true,
     automergeType: "pr",
     platformAutomerge: true,

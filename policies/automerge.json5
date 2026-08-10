@@ -3,7 +3,7 @@
   description: "Automerge trusted tooling updates after CI passes.",
   packageRules: [
     {
-      description: "Automerge Renovate and formatter updates after CI passes.",
+      description: "Create Renovate and formatter updates every second night, then automerge after CI passes.",
       matchPackageNames: [
         "@biomejs/biome",
         "docker.io/renovate/renovate",
@@ -14,6 +14,7 @@
         "renovate/renovate",
         "renovatebot/renovate",
       ],
+      schedule: ["* 0-5 */2 * *"],
       automerge: true,
       automergeType: "pr",
       platformAutomerge: true,
