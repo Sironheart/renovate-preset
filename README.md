@@ -36,6 +36,7 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 Presets are grouped by intent. Each file is self-documenting — open it for the `description` and any caveats.
 
 - [`config/`](./config) — top-level Renovate config (registry aliases, built-in manager file-pattern extensions).
+- [`language/`](./language) — rules for language-specific tooling and ecosystems.
 
 <!-- - [`overrides/`](./overrides) — fixes to `depName`, `sourceUrl`, `packageName`, or `changelogUrl` for specific packages or managers. -->
 

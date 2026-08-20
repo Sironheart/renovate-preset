@@ -3,7 +3,7 @@
 import { readdirSync, writeFileSync } from "node:fs";
 
 const REPO = "sironheart/renovate-preset";
-const DIRS = ["config", "policies", "versioning"];
+const DIRS = ["config", "language", "policies", "versioning"];
 
 const extendsList = DIRS.flatMap((dir) =>
   readdirSync(dir)

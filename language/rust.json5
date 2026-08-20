@@ -1,0 +1,11 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Rules for Rust ecosystem tooling.",
+  packageRules: [
+    {
+      description: "dtolnay/rust-toolchain tags are Rust toolchain channels, not semver action releases, so digest pinning cannot resolve updates.",
+      matchPackageNames: ["dtolnay/rust-toolchain"],
+      pinDigests: false,
+    },
+  ],
+}
