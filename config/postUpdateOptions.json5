@@ -1,0 +1,20 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Enable Renovate's built-in post-update operations that refresh generated files and dependency artifacts before CI. goGenerate runs only when Renovate's global allowedUnsafeExecutions includes it.",
+  postUpdateOptions: [
+    "bundlerConservative",
+    "composerNoMinimalChanges",
+    "composerWithAll",
+    "dotnetWorkloadRestore",
+    "goGenerate",
+    "gomodTidyAll",
+    "gomodUpdateImportPaths",
+    "gomodVendor",
+    "helmUpdateSubChartArchives",
+    "kustomizeInflateHelmCharts",
+    "npmDedupe",
+    "npmInstallTwice",
+    "pnpmDedupe",
+    "yarnDedupeHighest",
+  ],
+}
