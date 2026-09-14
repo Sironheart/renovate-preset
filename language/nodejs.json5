@@ -1,0 +1,19 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Rules for Node.js ecosystem tooling.",
+  packageRules: [
+    {
+      description: "Ignore TypeScript 7.0 releases.",
+      matchPackageNames: ["typescript"],
+      allowedVersions: "!/^7\\.0(?:\\.|$)/",
+    },
+    {
+      description: "Create Node.js toolchain updates once each week, then automerge after CI passes.",
+      matchPackageNames: ["@types/node", "node", "pnpm"],
+      schedule: ["* 0-5 * * 1"],
+      automerge: true,
+      automergeType: "pr",
+      platformAutomerge: true,
+    },
+  ],
+}

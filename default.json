@@ -7,6 +7,7 @@
     "local>sironheart/renovate-preset//config/hostRules.json5",
     "local>sironheart/renovate-preset//config/postUpdateOptions.json5",
     "local>sironheart/renovate-preset//config/registryAlias.json5",
+    "local>sironheart/renovate-preset//language/nodejs.json5",
     "local>sironheart/renovate-preset//language/rust.json5",
     "local>sironheart/renovate-preset//policies/automerge.json5",
     "local>sironheart/renovate-preset//policies/lockFileMaintenance.json5",
