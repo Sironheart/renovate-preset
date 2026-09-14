@@ -2,4 +2,10 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "A list of the most common mappings for git instances",
   hostRules: [{ matchHost: "git.erwanleboucher.dev", hostType: "forgejo" }],
+  logLevelRemap: [
+    {
+      matchMessage: "/^getChangeLogJSON error$/",
+      newLogLevel: "warn",
+    },
+  ],
 }
