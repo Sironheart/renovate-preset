@@ -1,5 +1,5 @@
 [tools]
-lefthook = "2.1.12"
+lefthook = "2.1.14"
 node = "24.21.0"
 oxfmt = "0.67.0"
 "npm:renovate" = { version = "44.75.1", trust_policy_excludes = ["@yarnpkg/libzip@3.2.2"] }
