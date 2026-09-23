@@ -1,6 +1,6 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "Stock Renovate presets and shared rules that form the base of this bundle. Listed alphabetically first so subsequent presets in this repo can override.",
+  description: "Stock Renovate presets that form the base of this bundle. Listed alphabetically first so subsequent presets in this repo can override.",
   extends: [
     "config:best-practices",
     "docker:enableMajor",
@@ -10,12 +10,5 @@
     "customManagers:helmChartYamlAppVersions",
     "customManagers:makefileVersions",
     "customManagers:tsconfigNodeVersions",
-  ],
-  packageRules: [
-    {
-      description: "Group updates for the same upstream source across managers.",
-      matchSourceUrls: ["*"],
-      groupName: "{{{sourceUrl}}}",
-    },
   ],
 }

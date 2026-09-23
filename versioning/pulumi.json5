@@ -1,0 +1,17 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  packageRules: [
+    {
+      description: "Group Pulumi core CLI, SDK, and image updates.",
+      groupName: "Pulumi",
+      groupSlug: "pulumi",
+      matchPackageNames: [
+        "@pulumi/pulumi",
+        "pulumi",
+        "pulumi/pulumi",
+        "docker.io/pulumi/pulumi",
+        "ghcr.io/pulumi/pulumi",
+      ],
+    },
+  ],
+}

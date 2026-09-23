@@ -1,5 +1,12 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
-  description: "Enable Biome version extraction; matching updates are grouped by source URL in the base config.",
   extends: ["customManagers:biomeVersions"],
+  packageRules: [
+    {
+      description: "Group Biome updates across package.json, mise.toml, and schema JSON.",
+      groupName: "Biome",
+      groupSlug: "biome",
+      matchPackageNames: ["@biomejs/biome"],
+    },
+  ],
 }

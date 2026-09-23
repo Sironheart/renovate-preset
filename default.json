@@ -12,6 +12,7 @@
     "local>sironheart/renovate-preset//policies/automerge.json5",
     "local>sironheart/renovate-preset//policies/lockFileMaintenance.json5",
     "local>sironheart/renovate-preset//policies/semanticCommits.json5",
-    "local>sironheart/renovate-preset//versioning/biome.json5"
+    "local>sironheart/renovate-preset//versioning/biome.json5",
+    "local>sironheart/renovate-preset//versioning/pulumi.json5"
   ]
 }
