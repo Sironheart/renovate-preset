@@ -19,5 +19,13 @@
       automergeType: "pr",
       platformAutomerge: true,
     },
+    {
+      description: "Automerge non-major mise CLI, GitHub Actions, and image updates across managers.",
+      matchPackageNames: ["mise", "jdx/mise", "jdx/mise-action", "ghcr.io/jdx/mise"],
+      matchUpdateTypes: ["minor", "patch", "pin", "pinDigest", "digest"],
+      automerge: true,
+      automergeType: "pr",
+      platformAutomerge: true,
+    },
   ],
 }

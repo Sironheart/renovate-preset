@@ -1,0 +1,22 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Group Go tooling updates across managers.",
+  packageRules: [
+    {
+      description: "Group GoReleaser CLI and GitHub Actions updates across managers.",
+      groupName: "GoReleaser",
+      groupSlug: "goreleaser",
+      matchPackageNames: ["goreleaser", "goreleaser/goreleaser", "goreleaser/goreleaser-action"],
+    },
+    {
+      description: "Group golangci-lint CLI and GitHub Actions updates across managers.",
+      groupName: "golangci-lint",
+      groupSlug: "golangci-lint",
+      matchPackageNames: [
+        "golangci-lint",
+        "golangci/golangci-lint",
+        "golangci/golangci-lint-action",
+      ],
+    },
+  ],
+}
