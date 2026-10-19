@@ -1,6 +1,6 @@
 [tools]
 lefthook = "2.2.2"
-node = "24.21.0"
+node = "24.22.0"
 oxfmt = "0.73.0"
 "npm:renovate" = { version = "44.155.8", trust_policy_excludes = ["@yarnpkg/libzip@3.2.2"] }
 shellcheck = "0.11.0"
