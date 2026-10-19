@@ -41,6 +41,7 @@ Presets are grouped by intent. Each file is self-documenting — open it for the
 <!-- - [`overrides/`](./overrides) — fixes to `depName`, `sourceUrl`, `packageName`, or `changelogUrl` for specific packages or managers. -->
 
 - [`policies/`](./policies) — opt-in `packageRules` that shape commit messages. Extend only if you want the convention.
+    - [`policies/semanticCommitsCi.json5`](./policies/semanticCommitsCi.json5) — always use non-breaking `ci` commits for [CI managers](https://docs.renovatebot.com/configuration-options/#packagerulesmatchcategories), including GitHub/Forgejo/Gitea Actions and GitLab CI. Included in the default preset; when extending individually, load it after other commit-message policies. Major updates omit `!`, but can still break your pipelines.
 - [`versioning/`](./versioning) — custom `versioning` schemes for upstreams that ship non-semver tags.
 
 [`default.json`](./default.json) lists every preset that ships in this repo.

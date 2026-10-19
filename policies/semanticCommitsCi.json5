@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Use non-breaking ci commits for every CI-manager update, including majors. Extend after other commit-message policies.",
+  packageRules: [
+    {
+      matchCategories: ["ci"],
+      semanticCommits: "enabled",
+      semanticCommitType: "ci",
+      // Override the breaking-change prefix inherited from the major-update rule.
+      commitMessagePrefix: "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
+    },
+  ],
+}
