@@ -3,6 +3,18 @@
   description: "Group Go tooling updates across managers.",
   packageRules: [
     {
+      description: "Group Go toolchain updates across managers (mise, go.mod, Docker/CI images).",
+      groupName: "Go",
+      groupSlug: "go",
+      matchPackageNames: ["go", "golang", "golang/go"],
+    },
+    {
+      description: "Bump the go.mod go directive together with the grouped toolchain update.",
+      matchManagers: ["gomod"],
+      matchDepTypes: ["golang"],
+      rangeStrategy: "bump",
+    },
+    {
       description: "Group GoReleaser CLI and GitHub Actions updates across managers.",
       groupName: "GoReleaser",
       groupSlug: "goreleaser",

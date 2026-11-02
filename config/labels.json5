@@ -1,0 +1,7 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Label PRs with their update type.",
+  major: { addLabels: ["major"] },
+  minor: { addLabels: ["minor"] },
+  patch: { addLabels: ["patch"] },
+}

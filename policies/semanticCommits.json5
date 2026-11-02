@@ -24,6 +24,17 @@
       commitMessageExtra: "({{currentDigestShort}} ➔ {{newDigestShort}})",
     },
     {
+      matchDepTypes: ["devDependencies"],
+      semanticCommitType: "chore",
+      // Dev dependencies are not part of the deliverable, so majors are not breaking.
+      commitMessagePrefix: "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
+    },
+    {
+      description: "Shorten long dependency names, e.g. go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc becomes go.opentelemetry.io/.../otlptracegrpc. Typed topics below take precedence.",
+      matchJsonata: ["$length(depName) > 50"],
+      commitMessageTopic: "dependency {{replace '^([^/]+)/.+/([^/]+)$' '$1/.../$2' depName}}",
+    },
+    {
       matchDatasources: ["docker"],
       semanticCommitScope: "container",
       commitMessageTopic: "image {{depName}}",

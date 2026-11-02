@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Wait 3 days before proposing any update. Datasources without release timestamps are not blocked.",
+  minimumReleaseAge: "3 days",
+  minimumReleaseAgeBehaviour: "timestamp-optional",
+  logLevelRemap: [
+    {
+      matchMessage: "/^.*as we're running with minimumReleaseAgeBehaviour=timestamp-optional,.*$/",
+      newLogLevel: "debug",
+    },
+  ],
+}

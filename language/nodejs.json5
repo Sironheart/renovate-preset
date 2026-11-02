@@ -8,6 +8,12 @@
       allowedVersions: "!/^7\\.0(?:\\.|$)/",
     },
     {
+      description: "Group Node.js toolchain updates across managers (mise, .nvmrc, engines, Docker/CI images).",
+      groupName: "Node.js",
+      groupSlug: "nodejs",
+      matchPackageNames: ["node", "nodejs/node"],
+    },
+    {
       description: "Create Node.js toolchain updates once each week, then automerge after CI passes.",
       matchPackageNames: ["@types/node", "node", "pnpm"],
       schedule: ["* 0-5 * * 1"],

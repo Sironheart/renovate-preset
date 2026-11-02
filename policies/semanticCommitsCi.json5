@@ -9,5 +9,12 @@
       // Override the breaking-change prefix inherited from the major-update rule.
       commitMessagePrefix: "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
     },
+    {
+      description: "pre-commit hooks are CI tooling, but the manager has no ci category.",
+      matchManagers: ["pre-commit"],
+      semanticCommits: "enabled",
+      semanticCommitType: "ci",
+      commitMessagePrefix: "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
+    },
   ],
 }

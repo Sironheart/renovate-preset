@@ -1,7 +1,11 @@
 {
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   description: "A list of the most common mappings for git instances",
-  hostRules: [{ matchHost: "git.erwanleboucher.dev", hostType: "forgejo" }],
+  hostRules: [
+    { matchHost: "git.erwanleboucher.dev", hostType: "forgejo" },
+    // Keeps one slow registry from stalling the whole run.
+    { timeout: 20000 },
+  ],
   logLevelRemap: [
     {
       matchMessage: "/^getChangeLogJSON error$/",

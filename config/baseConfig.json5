@@ -6,6 +6,7 @@
     "docker:enableMajor",
     "helpers:pinGitHubActionDigestsToSemver",
     ":disableRateLimiting",
+    ":enablePreCommit",
     "customManagers:githubActionsVersions",
     "customManagers:helmChartYamlAppVersions",
     "customManagers:makefileVersions",
