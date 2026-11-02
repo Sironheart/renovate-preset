@@ -56,6 +56,8 @@
       semanticCommitType: "chore",
       semanticCommitScope: "mise",
       commitMessageTopic: "tool {{depName}}",
+      // mise tools are local dev tooling, not part of the deliverable, so majors are not breaking.
+      commitMessagePrefix: "{{semanticCommitType}}{{#if semanticCommitScope}}({{semanticCommitScope}}){{/if}}:",
     },
   ],
 }
