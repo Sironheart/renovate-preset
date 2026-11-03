@@ -21,7 +21,7 @@ Use Renovate's path-based preset syntax (include the `.json5` extension since Re
 
 ```jsonc
 {
-    "extends": ["github>sironheart/renovate-preset//versioning/biome.json5"],
+    "extends": ["github>sironheart/renovate-preset//versioning/biomeGrouping.json5"],
 }
 ```
 
@@ -41,7 +41,9 @@ Presets are grouped by intent. Each file is self-documenting — open it for the
 <!-- - [`overrides/`](./overrides) — fixes to `depName`, `sourceUrl`, `packageName`, or `changelogUrl` for specific packages or managers. -->
 
 - [`policies/`](./policies) — opt-in `packageRules` that shape commit messages. Extend only if you want the convention.
-    - [`policies/semanticCommitsCi.json5`](./policies/semanticCommitsCi.json5) — always use non-breaking `ci` commits for [CI managers](https://docs.renovatebot.com/configuration-options/#packagerulesmatchcategories), including GitHub/Forgejo/Gitea Actions and GitLab CI. Included in the default preset; when extending individually, load it after other commit-message policies. Major updates omit `!`, but can still break your pipelines.
+    - [`policies/githubActionsGrouping.json5`](./policies/githubActionsGrouping.json5) — group GitHub-hosted actions by owner/repository, pairing short GitHub references with explicit `https://github.com/` references in Forgejo workflows. Included in the default preset.
+    - Automerge update creation windows do not overlap: lock maintenance Monday 00:00–04:00, Renovate/formatters 04:00–08:00 every second day, mise daily 08:00–12:00. Times use the configured Renovate timezone (UTC by default). Platform automerge remains enabled, so merging can happen outside these windows.
+    - [`policies/semanticCommitMessagesCi.json5`](./policies/semanticCommitMessagesCi.json5) — always use non-breaking `ci` commits for [CI managers](https://docs.renovatebot.com/configuration-options/#packagerulesmatchcategories), including GitHub/Forgejo/Gitea Actions and GitLab CI. Included in the default preset; when extending individually, load it after other commit-message policies. Major updates omit `!`, but can still break your pipelines.
 - [`versioning/`](./versioning) — custom `versioning` schemes for upstreams that ship non-semver tags.
 
 [`default.json`](./default.json) lists every preset that ships in this repo.

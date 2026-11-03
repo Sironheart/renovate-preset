@@ -1,0 +1,12 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  description: "Group GitHub-hosted actions by owner/repository across GitHub and Forgejo workflows, including explicit github.com URLs.",
+  packageRules: [
+    {
+      matchManagers: ["github-actions"],
+      matchDatasources: ["github-tags", "github-digest"],
+      matchDepTypes: ["action", "workflow"],
+      groupName: "{{{packageName}}} action",
+    },
+  ],
+}

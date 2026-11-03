@@ -3,7 +3,7 @@
   description: "Automerge trusted tooling updates after CI passes.",
   packageRules: [
     {
-      description: "Create Renovate and formatter updates every second night, then automerge after CI passes.",
+      description: "Create Renovate and formatter updates every second day from 04:00 to 08:00, then automerge after CI passes.",
       matchPackageNames: [
         "@biomejs/biome",
         "docker.io/renovate/renovate",
@@ -14,15 +14,16 @@
         "renovate/renovate",
         "renovatebot/renovate",
       ],
-      schedule: ["* 0-5 */2 * *"],
+      schedule: ["* 4-7 */2 * *"],
       automerge: true,
       automergeType: "pr",
       platformAutomerge: true,
     },
     {
-      description: "Automerge non-major mise CLI, GitHub Actions, and image updates across managers.",
+      description: "Create non-major mise CLI, GitHub Actions, and image updates daily from 08:00 to 12:00, then automerge after CI passes.",
       matchPackageNames: ["mise", "jdx/mise", "jdx/mise-action", "ghcr.io/jdx/mise"],
       matchUpdateTypes: ["minor", "patch", "pin", "pinDigest", "digest"],
+      schedule: ["* 8-11 * * *"],
       automerge: true,
       automergeType: "pr",
       platformAutomerge: true,
