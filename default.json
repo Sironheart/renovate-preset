@@ -15,6 +15,7 @@
     "local>sironheart/renovate-preset//policies/lockFileMaintenanceAutomerge.json5",
     "local>sironheart/renovate-preset//policies/osvVulnerabilityAlerts.json5",
     "local>sironheart/renovate-preset//policies/releaseAgeDelay.json5",
+    "local>sironheart/renovate-preset//policies/rustNightlyAutomerge.json5",
     "local>sironheart/renovate-preset//policies/semanticCommitMessages.json5",
     "local>sironheart/renovate-preset//policies/semanticCommitMessagesCi.json5",
     "local>sironheart/renovate-preset//policies/trustedToolingAutomerge.json5",
